@@ -20,7 +20,7 @@ function getTwitterBirthday($screenName)
             throw new Exception('status code from twitter is not invalid');
         }
     } catch (HttpClientException $e) {
-        throw new ModelException('request to twitter.com error');
+        throw new Exception('request to twitter.com error');
     }
 
     $crawler = new Crawler($html);
