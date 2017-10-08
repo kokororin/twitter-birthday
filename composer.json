@@ -1,6 +1,6 @@
 {
     "name": "kokororin/twitter-birthday",
-    "description": "Get user's birthday",
+    "description": "Parse out birthday info of twitter users.",
     "type": "library",
     "license": "MIT",
     "authors": [
