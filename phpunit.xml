@@ -16,7 +16,7 @@
 >
     <testsuites>
         <testsuite name="Test Suite">
-            <file>./test.php</file>
+            <file>./TwitterBirthdayTest.php</file>
         </testsuite>
     </testsuites>
 

@@ -7,29 +7,29 @@ class TwitterBirthdayTest extends TestCase
 
     public function testPile()
     {
-        $birthday = getTwitterBirthday('pile_eric');
-        $this->assertEquals(5, $birthday->month);
-        $this->assertEquals(2, $birthday->day);
+        $birthday = new TwitterBirthday('pile_eric');
+        $this->assertEquals(5, $birthday['month']);
+        $this->assertEquals(2, $birthday['day']);
     }
 
     public function testRippi()
     {
-        $birthday = getTwitterBirthday('rippialoha');
-        $this->assertEquals(10, $birthday->month);
-        $this->assertEquals(26, $birthday->day);
+        $birthday = new TwitterBirthday('rippialoha');
+        $this->assertEquals(10, $birthday['month']);
+        $this->assertEquals(26, $birthday['day']);
     }
 
     public function testEmi()
     {
-        $birthday = getTwitterBirthday('nittaemi85');
-        $this->assertEquals(12, $birthday->month);
-        $this->assertEquals(10, $birthday->day);
+        $birthday = new TwitterBirthday('nittaemi85');
+        $this->assertEquals(12, $birthday['month']);
+        $this->assertEquals(10, $birthday['day']);
     }
 
     public function testShikaco()
     {
         try {
-            $birthday = getTwitterBirthday('shikaco_staff');
+            $birthday = new TwitterBirthday('shikaco_staff');
         } catch (Exception $e) {
             $this->assertEquals(self::CANNOT_FIND_BIRTHDAY_MESSAGE, $e->getMessage());
         }
@@ -37,15 +37,15 @@ class TwitterBirthdayTest extends TestCase
 
     public function testUtchi()
     {
-        $birthday = getTwitterBirthday('aya_uchida');
-        $this->assertEquals(7, $birthday->month);
-        $this->assertEquals(23, $birthday->day);
+        $birthday = new TwitterBirthday('aya_uchida');
+        $this->assertEquals(7, $birthday['month']);
+        $this->assertEquals(23, $birthday['day']);
     }
 
     public function testSoraMaru()
     {
         try {
-            $birthday = getTwitterBirthday('tokui_sorangley');
+            $birthday = new TwitterBirthday('tokui_sorangley');
         } catch (Exception $e) {
             $this->assertEquals(self::CANNOT_FIND_BIRTHDAY_MESSAGE, $e->getMessage());
         }
@@ -53,15 +53,15 @@ class TwitterBirthdayTest extends TestCase
 
     public function testKssn()
     {
-        $birthday = getTwitterBirthday('kusudaaina');
-        $this->assertEquals(2, $birthday->month);
-        $this->assertEquals(1, $birthday->day);
+        $birthday = new TwitterBirthday('kusudaaina');
+        $this->assertEquals(2, $birthday['month']);
+        $this->assertEquals(1, $birthday['day']);
     }
 
     public function testNanjolno()
     {
         try {
-            $birthday = getTwitterBirthday('nanjolno');
+            $birthday = new TwitterBirthday('nanjolno');
         } catch (Exception $e) {
             $this->assertEquals(self::CANNOT_FIND_BIRTHDAY_MESSAGE, $e->getMessage());
         }
@@ -70,7 +70,7 @@ class TwitterBirthdayTest extends TestCase
     public function testMimorin()
     {
         try {
-            $birthday = getTwitterBirthday('mimori_suzuko');
+            $birthday = new TwitterBirthday('mimori_suzuko');
         } catch (Exception $e) {
             $this->assertEquals(self::CANNOT_FIND_BIRTHDAY_MESSAGE, $e->getMessage());
         }

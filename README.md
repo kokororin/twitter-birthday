@@ -12,16 +12,10 @@ $ composer require kokororin/twitter-birthday:dev-master
 
 ## Usage
 ```php
-$birthday = getTwitterBirthday('pile_eric');
-echo $birthday->month; // 5
-echo $birthday->day; // 2
+$birthday = new TwitterBirthday('pile_eric');
+echo $birthday['month']; // 5
+echo $birthday['day']; // 2
 ```
-
-## API
-
-### getTwitterBirthday($screenName)
-
-**Returns Object.**
 
 ## License
 

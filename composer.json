@@ -10,7 +10,7 @@
         }
     ],
     "autoload": {
-        "files": ["twitter-birthday.php"]
+        "files": ["TwitterBirthday.php"]
     },
     "require": {
         "php": ">=5.6",
