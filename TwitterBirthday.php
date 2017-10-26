@@ -45,6 +45,12 @@ class TwitterBirthday implements ArrayAccess
         $dom = $crawler->eq(0);
         $text = trim($dom->text());
 
+        if ($text == '今日はお誕生日です') {
+            $this->offsetSet('month', +date('m'));
+            $this->offsetSet('day', +date('d'));
+            return;
+        }
+
         preg_match('/(0?[1-9]|1[012])月(0?[1-9]|[12][0-9]|3[01])日/', $text, $matches);
         if (isset($matches[1]) && isset($matches[2])) {
             $this->offsetSet('month', +$matches[1]);
